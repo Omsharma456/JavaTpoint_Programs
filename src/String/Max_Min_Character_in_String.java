@@ -1,29 +1,28 @@
 package String;
-
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Max_Min_Character_in_String {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s=sc.nextLine();
-        char maxchar=' ';
-        char minchar=' ';
-        int min=0;
-        int max=0;
-        int count=0;
-        for(int i=0; i<s.length(); i++){
-            for (int j = i + 1; j < s.length(); j++) {
-                if (s.charAt(i) == s.charAt(j)) {
-                    count++;
-                }
-            }
-            if (count > max) {
-                max=count;
-                maxchar=s.charAt(i);
-            }
-            count=0;
+        char[] s = sc.nextLine().toCharArray();
+        int[] arr = new int[150];
+        for (int i = 0; i < s.length; i++) {
+            int ascii=(int)s[i];
+            arr[ascii]++;
         }
-        System.out.println(maxchar);
+        int max=0;
+        int index=0;
+        System.out.print("Minimum Occurance: ");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                System.out.println((char)i);
+            }
+            if (arr[i] > max) {
+                max=arr[i];
+                index=i;
+            }
+        }
+        System.out.println("Maximum Occurance: "+(char)index);
     }
+
 }
