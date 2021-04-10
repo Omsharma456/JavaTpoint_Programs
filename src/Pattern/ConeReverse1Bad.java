@@ -1,3 +1,12 @@
+/*
+pattern
+_______*__
+______*__*__
+____*__*__*__
+__*__*__*__*__
+*__*__*__*__*__
+
+ */
 package Pattern;
 
 import java.util.Scanner;
