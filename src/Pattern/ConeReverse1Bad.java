@@ -9,10 +9,10 @@ public class ConeReverse1Bad {
         int j;
         for (int i = 1; i <= n; i++) {
             for (j = 1; j <= n - i; j++) {
-                System.out.print(" ");
+                System.out.print("__");
             }
             while (j <= n) {
-                System.out.print("* ");
+                System.out.print("*__");
                 j++;
             }
             System.out.println();
